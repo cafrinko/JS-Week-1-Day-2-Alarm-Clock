@@ -12,16 +12,15 @@
         <title>Alarm Clock</title>
     </head>
     <body>
-        <form class="form1" id="form1" action="index.html" method="post">
-            <label for="title">Enter title:</label>
-            <input type="text" id="title" placeholder="enter title">
-            <label for="body">Enter Content</label>
-            <textarea rows="4" cols="50" type="text" id="body" placeholder="enter body"></textarea>
-            <button type="submit">Submit</button>
+        <form class="form1" id="form1">
+            <label for="title">Enter alarm time</label>
+            <input type="text" id="alarmTime" placeholder="enter alarm time">
+            <button type="submit">Set alarm</button>
         </form>
         <div id="actuallyRealTime">
-          <h3>Well look at the time! </h3>
+          <h3>Time to wake up!</h3>
           <h3 id="time"></h3>
+          <h4 id="alarmTime"></h4>
         </div>
     </body>
 </html>

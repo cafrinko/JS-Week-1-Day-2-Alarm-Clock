@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var utilities = require('gulp-util');
 var del = require('del');
+var buildProduction = utilities.env.production;
 var jshint = require('gulp-jshint');
 var lib = require('bower-files')({
   "overrides":{
@@ -17,6 +18,7 @@ var lib = require('bower-files')({
     }
   }
 });
+
 gulp.task('bower', ['bowerJS', 'bowerCSS']);
 
 gulp.task('bowerCSS', function () {
