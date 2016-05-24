@@ -1,13 +1,16 @@
-$(document).ready(function(){
+$(function(){
+  displayTime();
   $('#form1').submit(function(event){
     event.preventDefault();
-    var alarm = $('#alarmTime').val();
-    var output;
-    if (alarm === currentTime) {
-      output = "lol";
-    } else {
-      output = "not yet";
-    }
-    $("#alarmy").text(output);
+    alarmTime = $('#alarmTime').val();
   });
+  
+  function lolz() {
+    if (time.innerHTML == alarmTime) {
+      $('#output').text("same");
+    } else {
+      $('#output').text("not same");
+    }
+  };
+  setInterval(lolz, 1000);
 });

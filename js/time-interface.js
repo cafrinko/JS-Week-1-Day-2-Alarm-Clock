@@ -1,13 +1,5 @@
-var currentTime = null;
-var date = null;
-
-var update = function() {
-  date = moment(new Date());
-  currentTime.html(date.format('LT'));
-};
-
-$(document).ready(function(){
-    currentTime = $('#time');
-    update();
-    setInterval(update, 1000);
-});
+function displayTime() {
+    var time = moment().format('HH:mm');
+    $('#time').html(time);
+    setInterval(displayTime, 1000);
+}
